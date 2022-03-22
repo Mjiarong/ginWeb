@@ -13,36 +13,41 @@ import UserList from '../components/user/UserList.vue'
 Vue.use(VueRouter)
 
 const routes = [{
-	path: '/login',
-	name: 'login',
-	component: Login
-},
-{
-	path: '/admin',
-	name: 'admin',
-	component: Admin,
-	children: [{
-			path: 'index',
-			component: Index,
-		},
-		{
-			path: 'addart',
-			component: AddArt,
-		},
-		{
-			path: 'artlist',
-			component: ArtList,
-		},
-		{
-			path: 'catelist',
-			component: CateList,
-		},
-		{
-			path: 'userlist',
-			component: UserList,
-		},
-	],
-}
+		path: '/login',
+		name: 'login',
+		component: Login
+	},
+	{
+		path: '/admin',
+		name: 'admin',
+		component: Admin,
+		children: [{
+				path: 'index',
+				component: Index,
+			},
+			{
+				path: 'addart',
+				component: AddArt,
+			},
+			{
+				path: 'addart/:id',
+				component: AddArt,
+				props: true
+			},
+			{
+				path: 'artlist',
+				component: ArtList,
+			},
+			{
+				path: 'catelist',
+				component: CateList,
+			},
+			{
+				path: 'userlist',
+				component: UserList,
+			},
+		],
+	}
 ]
 
 const router = new VueRouter({

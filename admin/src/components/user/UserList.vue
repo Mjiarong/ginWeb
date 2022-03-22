@@ -280,7 +280,7 @@
 					pager.current = 1
 				}
 				this.pagination = pager
-				this.getUserList()
+				this.searchUser()
 			},
 			// 删除用户
 			deleteUser(id) {
