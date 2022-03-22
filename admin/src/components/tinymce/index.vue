@@ -12,7 +12,11 @@ import './icons/default/icons.min.js'
 import './themes/silver/theme.min.js'
 
 import './langs/zh_CN'
-import './skins/ui/oxide/skin.min.css'//不加这句UI不会显示
+
+import './skins/ui/oxide/skin.min.css'
+//import './skins/content/default/content.min.css'
+//import './skins/ui/oxide/skin.min.css'
+
 // 注册插件
 import './plugins/preview/plugin.min.js'
 import './plugins/paste/plugin.min.js'
