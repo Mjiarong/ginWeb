@@ -60,18 +60,20 @@ export default {
   data() {
     return {
       profileInfo: {
-        id: 1
+        name:window.sessionStorage.getItem('username'),
       }
     }
   },
   created() {
+	console.log("created！！")
+	console.log(this.profileInfo.name)
     this.getProfileInfo()
   },
   methods: {
     // 获取个人设置
     async getProfileInfo() {
       const { data: res } = await this.$http.get(
-        `profile/${this.profileInfo.id}`
+        `profile/name/${this.profileInfo.name}`
       )
       this.profileInfo = res.data
       this.$root.$emit('msg', res.data.icp_record)

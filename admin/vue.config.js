@@ -7,6 +7,6 @@ module.exports = defineConfig({
     ],
 	lintOnSave: false,
 	publicPath: '/admin/',
-	outputDir: 'dist',
-	assetsDir: 'static'
+	//outputDir: 'dist',
+	//assetsDir: 'static'
 })
